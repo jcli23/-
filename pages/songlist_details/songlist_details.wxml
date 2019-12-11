@@ -1,0 +1,87 @@
+<view class="introduce">
+  <view class="header">
+    <view bindtap="back">
+      <image src="../../images/left_back.png"></image>
+    </view>
+    <view class="right">
+      <view class="font">歌单</view>
+      <view class="copywriter">{{copywriter}}</view>
+    </view>
+  </view>
+  <image src="{{playlist.coverImgUrl}}" class="backgroundcover"></image>
+  <view class="top">
+    <view class="left">
+      <image src="{{playlist.coverImgUrl}}"></image>
+    </view>
+    <view class="right">
+      <view class="name">{{playlist.name}}</view>
+      <view class="center">
+        <image src="{{playlist.creator.avatarUrl}}" class="wanyi"></image>
+        <view class="nickname">{{playlist.creator.nickname}}</view>
+        <image src="../../images/right_go.png" class="right_go"></image>
+      </view>
+      <view class="description">{{playlist.description}}</view>
+    </view>
+  </view>
+  <view class="categry">
+    <view class="box">
+      <image src="../../images/comment.png"></image>
+      <view class="title">{{playlist.commentCount}}</view>
+    </view>
+    <view class="box">
+      <image src="../../images/share.png"></image>
+      <view class="title">{{playlist.shareCount}}</view>
+    </view>
+    <view class="box">
+      <image src="../../images/download.png"></image>
+      <view class="title">下载</view>
+    </view>
+    <view class="box">
+      <image src="../../images/choose.png"></image>
+      <view class="title">多选</view>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="top">
+    <image src="../../images/play.png" class="play"></image>
+    <view class="center">
+      <view class="font">播放全部</view>
+      <view class="count">(共{{playlist.tracks.length}}首)</view>
+    </view>
+    <view class="box">
+      <image src="../../images/add.png" class="add"></image>
+      <view class="font">收藏（{{playlist.subscribedCount}}）</view>
+    </view>
+  </view>
+  <view wx:for="{{playlist.tracks}}" wx:key="index">
+    <view class="songbox">
+      <view class="index" wx:if="{{play!==index}}">{{index+1}}</view>
+      <view wx:if="{{play===index}}">
+        <image src="../../images/horn.png" class="horn"></image>
+      </view>
+      <view class="name" bindtap="chage" data-index="{{index}}" data-id="{{item.id}}" data-song="{{item.name}}" data-author="{{item.ar[0].name}}">
+        <view class="song">{{item.name}}</view>
+        <view class="songlist">{{item.ar[0].name}}-{{item.al.name}}</view>
+      </view>
+      <image src="../../images/play.png" class="play"></image>
+      <image src="../../images/menu.png" class="menu"></image>
+    </view>
+  </view>
+</view>
+<view class="none"></view>
+<view wx:if="{{num!==0}}">
+  <view class="songbox2">
+    <image src="{{songcover}}" class="horn2" data-id="{{item.id}}" bindtap="gotoplay"></image>
+    <view class="name" data-id="{{item.id}}" bindtap="gotoplay">
+      <view class="song">{{song}}</view>
+      <view class="songlist">{{author}}</view>
+    </view>
+    <view wx:if="{{lock===false}}" class="play">
+      <image src="../../images/play.png" bindtap="audioPlay"></image>
+    </view>
+    <view wx:if="{{lock===true}}" class="play">
+      <image src="../../images/stop.png" bindtap="audioPause"></image>
+    </view>
+  </view>
+</view>

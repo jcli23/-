@@ -1,0 +1,25 @@
+.songsheets{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  width: 95%;
+  padding: 0 2.5% 40rpx 2.5%;
+}
+.songsheets image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 20rpx;
+}
+.songsheets .right{
+  margin-left: 20rpx;
+  width: 70%;
+}
+.songsheets .right .name{
+  font-size: 24rpx;
+  line-height: 30rpx;
+  padding: 6rpx 0;
+}
+.songsheets .right .artist{
+  font-size: 20rpx;
+  color: #999;
+}

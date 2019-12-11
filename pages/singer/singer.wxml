@@ -1,0 +1,18 @@
+<scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+  <view wx:for="{{singer}}" wx:key="index" class="top">
+    <view class="name {{num===index? 'bottom':''}}" bindtap="click" data-num="{{index}}" data-id="{{item.id}}">{{item.name}}</view>
+  </view>
+</scroll-view>
+<view wx:if="{{num!==0}}">
+  <scroll-view class="scroll-view_H" scroll-x="true" style="width: 100%">
+    <view wx:for="{{letter}}" wx:key="index" class="letter_box">
+      <view class="letter {{num2===index? 'color':''}}" bindtap="click2" data-num2="{{index}}" data-item="{{item}}">{{item}}</view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:for="{{artist}}" wx:key="index">
+  <view class="artist" bindtap="goto" data-id="{{item.id}}">
+    <image src="{{item.picUrl}}" class="img"></image>
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>

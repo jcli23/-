@@ -1,0 +1,12 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{albums}}" wx:key="index">
+    <view class="songsheets" data-id="{{item.id}}" bindtap="goto1">
+      <image src="{{item.picUrl}}"></image>
+      <view class="right">
+        <view class="name" wx:if="{{item.alias[0]}}">{{item.name}}({{item.alias[0]}})</view>
+        <view class="name" wx:if="{{!item.alias[0]}}">{{item.name}}</view>
+        <view class="artist">{{item.artist.name}} {{item.publishTime}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,11 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{playlists}}" wx:key="index">
+    <view class="playLists" bindtap="gotosingle" data-id="{{item.id}}">
+      <image src="{{item.coverImgUrl}}"></image>
+      <view class="right">
+        <view class="name">{{item.name}}</view>
+        <text class="count">{{item.trackCount}}首\t  by {{item.creator.nickname}}\t,\t播放{{item.playCount}}次 </text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

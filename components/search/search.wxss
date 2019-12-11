@@ -1,0 +1,150 @@
+.top{
+  display: flex;
+  height: 80rpx;
+  width: 95%;
+  padding: 0 2.5%;
+  align-items: center;
+}
+.top image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.top .input{
+  width: 85%;
+}
+.searchkey{
+  height: 96rpx;
+  width: 88%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  border: 2rpx solid #f2f2f2;
+  border-top: none;
+}
+.searchkey image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.searchkey .keyword{
+  font-size: 26rpx;
+  color: #333;
+  margin-left: 30rpx;
+  border-right: 2rpx solid #f2f2f2;
+}
+.top .user{
+  width: 40rpx;
+  height: 40rpx;
+}
+.line{
+  margin-top: 4rpx;
+  width: 75%;
+  border-bottom: 2rpx solid #999;
+  margin-left: 13%;
+}
+.Record{
+  width: 95%;
+  padding: 0 2.5%;
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.Record .font{
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.Record image{
+  margin-right: 20rpx;
+  width: 34rpx;
+  height: 34rpx;
+}
+.display{
+  height: 60rpx;
+  width: 100%;
+  white-space: nowrap;
+  padding: 0 0 40rpx 0;
+}
+.display .searchlist{
+  display: inline-block;
+}
+.display .value{
+  font-size: 26rpx;
+  height: 30rpx;
+  min-width: 40rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  line-height: 30rpx;
+  padding:10rpx 20rpx; 
+  background: #f2f2f2;
+  border-radius: 25rpx;
+}
+.searchhot{
+  width: 95%;
+  padding: 0 2.5%;
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.box{
+  width: 95%;
+  height: 80rpx;
+  padding: 10rpx 2.5%;
+  display: flex;
+  align-items: center;
+}
+.box .index{
+  width: 50rpx;
+  text-align: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.box .indexred{
+  width: 50rpx;
+  font-size: 24rpx;
+  color: red;
+}
+.box .center{
+  height: 80rpx;
+  width: 75%;
+  margin-left: 20rpx;
+}
+.box .center .firstrow{
+  display: flex;
+  height: 40rpx;
+  align-items: center;
+}
+.box .center .firstrow .searchWord{
+  font-size: 24rpx;
+}
+.box .center .firstrow .word_bold{
+  font-weight: 700;
+}
+.box .center .firstrow .icon{
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 20rpx;
+}
+.box .center .firstrow .new{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  color: green;
+  font-weight: 700;
+  font-style: italic;
+}
+.box .center .firstrow .hot{
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+  color: red;
+  font-style: italic;
+}
+.box .center .content{
+  font-size: 20rpx;
+  color: #999;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.box .score{
+  font-size: 20rpx;
+  color: #999;
+}

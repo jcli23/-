@@ -1,0 +1,40 @@
+<view class="bgcover">
+  <image src="{{picUrl}}" class="cover"></image>
+  <image src="../../images/left_back.png" class="back" bindtap="back"></image>
+  <view class="name">{{name}}</view>
+</view>
+<view class="songs">
+  <view class="top">
+    <view class="font {{num===0? 'chage':''}}" bindtap="num" data-num="{{0}}">主页</view>
+    <view class="font {{num===1? 'chage':''}}" bindtap="num" data-num="{{1}}">歌曲</view>
+    <view class="font {{num===2? 'chage':''}}" bindtap="num" data-num="{{2}}">专辑</view>
+    <view class="font {{num===3? 'chage':''}}" bindtap="num" data-num="{{3}}">视频</view>
+  </view>
+</view>
+<scroll-view scroll-y="true" style="height: 800rpx;">
+  <view class="hot50" bindtap="playhot">
+    <image src="../../images/play.png" class="play"></image>
+    <view class="font">播放热门50</view>
+  </view>
+  <view wx:for="{{hotsongs}}" wx:key="index">
+    <view class="songbox">
+      <view class="index" wx:if="{{play!==index}}">{{index+1}}</view>
+      <view wx:if="{{play===index}}">
+        <image src="../../images/horn.png" class="horn"></image>
+      </view>
+      <view class="name" data-index="{{index}}" bindtap="chage">
+        <view class="song">{{item.name}}</view>
+        <view class="songlist">{{item.ar[0].name}}-{{item.al.name}}</view>
+      </view>
+      <image src="../../images/play.png" class="play"></image>
+      <image src="../../images/menu.png" class="menu"></image>
+    </view>
+  </view>
+  <view class="more">更多热歌></view>
+  <view class="hang"></view>
+  <view class="introduction">
+    <view class="font">歌手简介</view>
+    <view class="briefDesc">{{briefDesc}}</view>
+    <view class="more">更多信息></view>
+  </view>
+</scroll-view>

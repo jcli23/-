@@ -1,0 +1,13 @@
+<view class="register">
+  <van-cell-group>
+    <van-field required clearable label="手机号" left-icon="phone-o" placeholder="请输入手机号" value="{{phonenum}}" bindblur="bindblur1" data-phonenum="{{value}}" bind:click-icon="onClickIcon" />
+    <van-field value="{{ password }}" type="password" label="密码" left-icon="photo-o" placeholder="请输入密码" bindblur="bindblur2" data-password="{{value}}" required border="{{ false }}" />
+    <van-field value="{{captcha}}" required clearable label="验证码" left-icon="label-o" bindblur="bindblur3" data-captcha="{{value}}" placeholder="请输入验证码" bind:click-icon="onClickIcon" />
+    <van-field value="{{nickname}}" required clearable label="昵称" left-icon="user-o" placeholder="请输入昵称" data-nickname="{{value}}" bindblur="bindblur4" bind:click-icon="onClickIcon" />
+  </van-cell-group>
+  <view class="code" bindtap="getcaptcha">发送验证码</view>
+  <view class="twobutton">
+    <view class="one_button" bindtap="tologin">前往登录</view>
+    <view class="two_button" bindtap="register">立即注册</view>
+  </view>
+</view>

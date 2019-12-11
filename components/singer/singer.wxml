@@ -1,0 +1,9 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{singer}}" wx:key="index">
+    <view class="talks" bindtap="goto" data-id="{{item.id}}">
+      <image src="{{item.img1v1Url}}"></image>
+      <view class="right" wx:if="{{!item.alias[0]}}">{{item.name}}</view>
+      <view class="right" wx:if="{{item.alias[0]}}">{{item.name}}({{item.alias[0]}})</view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,45 @@
+.videos{
+  display: flex;
+  width: 95%;
+  height: 140rpx;
+  align-items: center;
+  padding: 20rpx 2.5%;
+}
+.videos .left{
+  width: 240rpx;
+  height: 140rpx;
+  position: relative;
+}
+.videos .left image{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+.videos .left .playtime{
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+  height: 30rpx;
+  display: flex;
+  align-items: center;
+}
+.videos .left .playtime image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.videos .left .playtime .time{
+  font-size: 16rpx;
+  color: white;
+}
+.videos .right{
+  margin-left: 20rpx;
+  width: 60%;
+}
+.videos .right .name{
+  font-size: 24rpx;
+  line-height: 30rpx;
+}
+.videos .right .count{
+  font-size: 20rpx;
+  color: #999;
+}

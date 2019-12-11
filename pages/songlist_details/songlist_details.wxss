@@ -1,0 +1,312 @@
+.introduce {
+  width: 100%;
+  height: 680rpx;
+  position: relative;
+}
+
+.header {
+  height: 80rpx;
+  display: flex;
+  padding: 50rpx 2.5% 30rpx 2.5%;
+  width: 95%;
+}
+
+.header image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.header .right {
+  width: 60%;
+  padding-left: 20rpx;
+}
+
+.header .right .font {
+  font-size: 30rpx;
+  color: white;
+}
+
+.header .right .copywriter {
+  font-size: 16rpx;
+  color: #d8d5d5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.backgroundcover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  filter: blur(99px);
+}
+
+.introduce .top {
+  width: 95%;
+  height: 300rpx;
+  padding: 0 2.5%;
+  display: flex;
+}
+
+.introduce .top .left {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.introduce .top .left image {
+  width: 100%;
+  height: 100%;
+}
+
+.introduce .top .right {
+  width: 360rpx;
+  height: 300rpx;
+  margin-left: 40rpx;
+}
+
+.introduce .top .right .name {
+  font-size: 36rpx;
+  line-height: 60rpx;
+  color: white;
+  font-weight: 700;
+}
+
+.introduce .top .right .center {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+
+.introduce .top .right .center .wanyi {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.introduce .top .right .center .nickname {
+  font-size: 28rpx;
+  color: #d8d5d5;
+  margin-left: 10rpx;
+}
+
+.introduce .top .right .center .right_go {
+  width: 26rpx;
+  height: 26rpx;
+  margin-left: 10rpx;
+}
+
+.introduce .top .right .description {
+  font-size: 24rpx;
+  color: #d8d5d5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.categry {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  padding: 30rpx 0;
+}
+
+.categry .box {
+  width: 120rpx;
+  height: 100rpx;
+  text-align: center;
+}
+
+.categry .box image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 0 auto;
+}
+
+.categry .box .title {
+  font-size: 24rpx;
+  color: #d8d5d5;
+}
+
+.list {
+  width: 100%;
+  margin-top: -60rpx;
+  border-radius: 40rpx 40rpx 0 0;
+  background: white;
+}
+
+.list .top {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+
+.list .top .play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+}
+
+.list .top .center {
+  margin-left: 30rpx;
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+
+.list .top .center .font {
+  font-size: 28rpx;
+}
+
+.list .top .center .count {
+  font-size: 20rpx;
+  color: #999;
+}
+
+.list .top .box {
+  width: 200rpx;
+  height: 60rpx;
+  display: flex;
+  margin-left: 250rpx;
+  align-items: center;
+  border-radius: 30rpx;
+  background: rgba(248, 2, 22, 0.911);
+}
+
+.list .top .box .add {
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 20rpx;
+}
+
+.list .top .box .font {
+  font-size: 20rpx;
+  color: white;
+  margin-left: 10rpx;
+}
+
+.songbox {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+}
+
+.songbox2 {
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+  border: 2rpx solid #f2f2f2;
+  position: fixed;
+  bottom: 0;
+  background: white;
+}
+
+.songbox .index {
+  color: #999;
+  font-size: 32rpx;
+  margin-left: 40rpx;
+  width: 30rpx;
+}
+
+.songbox .horn {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 40rpx;
+}
+
+.songbox2 .horn2 {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+}
+
+.songbox .name {
+  width: 50%;
+  height: 80rpx;
+  margin-left: 40rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.songbox2 .name {
+  width: 50%;
+  height: 80rpx;
+  margin-left: 40rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+
+.songbox2 .name .song {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songbox .name .song {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songbox .name .songlist {
+  font-size: 18rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songbox2 .name .songlist {
+  font-size: 18rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songbox .play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 22%;
+}
+
+.songbox2 .play {
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 18%;
+}
+
+.songbox2 .play image {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.songbox .menu {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 2%;
+}
+
+.audio {
+  width: 100%;
+}
+
+.none {
+  height: 60rpx;
+}

@@ -1,0 +1,156 @@
+<view wx:if="{{result===false}}">
+  <view class="none">暂无数据~</view>
+</view>
+<view wx:if="{{result===true}}">
+  <scroll-view scroll-y="true" style="height: 1600rpx;">
+    <view wx:if="{{song!==null}}">
+      <view class="single">
+        <view class="font">单曲</view>
+        <view class="right">
+          <image src="../../images/play.png"></image>
+          <view class="font" bindtap="playall">播放全部</view>
+        </view>
+      </view>
+      <view wx:for="{{song.songs}}" wx:key="index">
+        <view class="songslist" wx:if="{{index<15}}" bindtap="play" data-index="{{index}}">
+          <view class="song">
+            <view class="songname">{{item.name}}</view>
+            <view class="name">{{item.ar[0].name}}-{{item.al.name}}</view>
+          </view>
+          <image src="../../images/play.png" class="play"></image>
+          <image src="../../images/menu.png" class="menu"></image>
+        </view>
+      </view>
+      <view class="moresong">{{song.moreText}}></view>
+    </view>
+    <view wx:if="{{playList!==null}}">
+      <view class="songsheet">歌单</view>
+      <view wx:for="{{playList.playLists}}" wx:key="index">
+        <view class="playLists" bindtap="gotosingle" data-id="{{item.id}}">
+          <image src="{{item.coverImgUrl}}"></image>
+          <view class="right">
+            <view class="name">{{item.name}}</view>
+            <text class="count">{{item.trackCount}}首\t  by {{item.creator.nickname}}\t,\t播放{{item.playCount}}次 </text>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{playList.moreText}} ></view>
+    </view>
+    <view wx:if="{{video!==null}}">
+      <view class="songsheet">视频</view>
+      <view wx:for="{{video.videos}}" wx:key="index">
+        <view class="video">
+          <view class="left">
+            <image src="{{item.coverUrl}}"></image>
+            <view class="playtime">
+              <image src="../../images/right.png"></image>
+              <view class="time">{{item.playTime}}</view>
+            </view>
+          </view>
+          <view class="right">
+            <view class="name">{{item.title}}</view>
+            <text class="count">{{item.durationms}}\t by\t {{item.creator[0].userName}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{video.moreText}} ></view>
+    </view>
+    <view wx:if="{{sim_query!==null}}">
+      <view class="songsheet">相关搜索</view>
+      <view class="querys">
+        <view wx:for="{{sim_query.sim_querys}}" wx:key="index">
+          <view class="keyword">{{item.keyword}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{mlog!==null}}">
+      <view class="songsheet">Mlog</view>
+      <view class="mlog">
+        <view class="box">
+          <image src="{{mlog.mlogs[0].resource.mlogBaseData.coverUrl}}"></image>
+          <view class="text">{{mlog.mlogs[0].resource.mlogBaseData.text}}</view>
+          <view class="bottom">
+            <image src="{{mlog.mlogs[0].resource.userProfile.avatarUrl}}"></image>
+            <view class="nickname">{{mlog.mlogs[0].resource.userProfile.nickname}}</view>
+            <view class="likedCount">{{mlog.mlogs[0].resource.mlogExtVO.likedCount}}赞</view>
+          </view>
+        </view>
+        <view class="box">
+          <image src="{{mlog.mlogs[1].resource.mlogBaseData.coverUrl}}"></image>
+          <view class="text">{{mlog.mlogs[1].resource.mlogBaseData.text}}</view>
+          <view class="bottom">
+            <view class="left">
+              <image src="{{mlog.mlogs[1].resource.userProfile.avatarUrl}}"></image>
+              <view class="nickname">{{mlog.mlogs[1].resource.userProfile.nickname}}</view>
+            </view>
+            <view class="likedCount">{{mlog.mlogs[1].resource.mlogExtVO.likedCount}}赞</view>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{mlog.moreText}}></view>
+    </view>
+    <view wx:if="{{talk!==null}}">
+      <view class="songsheet">主题</view>
+      <view wx:for="{{talk.talks}}" wx:key="index">
+        <view class="talks">
+          <view class="left">
+            <image src="{{item.showCover.url}}"></image>
+          </view>
+          <view class="right">
+            <view class="talkName">{{item.talkName}}</view>
+            <view class="follows">{{item.follows}}人关注\t | \t{{item.participations}}人参与</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{artist!==null}}">
+      <view class="songsheet">歌手</view>
+      <view wx:for="{{artist.artists}}" wx:key="index">
+        <view class="talks" bindtap="gotosinger" data-id="{{item.id}}">
+          <image src="{{item.img1v1Url}}"></image>
+          <view class="right" wx:if="{{!item.alias[0]}}">{{item.name}}</view>
+      <view class="right" wx:if="{{item.alias[0]}}">{{item.name}}({{item.alias[0]}})</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{album!==null}}">
+      <view class="songsheet">专辑</view>
+      <view wx:for="{{album.albums}}" wx:key="index">
+        <view class="songsheets" data-id="{{item.id}}" bindtap="goto1">
+          <image src="{{item.picUrl}}"></image>
+          <view class="right">
+            <view class="name" wx:if="{{item.alias[0]}}">{{item.name}}({{item.alias[0]}})</view>
+        <view class="name" wx:if="{{!item.alias[0]}}">{{item.name}}</view>
+            <view class="artist">{{item.artist.name}} {{item.publishTime}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{album.moreText}}></view>
+    </view>
+    <view wx:if="{{djRadio}}">
+      <view class="songsheet">电台</view>
+      <view wx:for="{{djRadio.djRadios}}" wx:key="index">
+        <view class="songsheets" bindtap="gotoradio" data-id="{{item.id}}">
+          <image src="{{item.picUrl}}"></image>
+          <view class="right">
+            <view class="name">{{item.name}}</view>
+            <view class="artist">{{item.artist.name}} {{item.dj.nickname}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{djRadio.moreText}}></view>
+    </view>
+    <view wx:if="{{user!==null}}">
+      <view class="songsheet">用户</view>
+      <view wx:for="{{user.users}}" wx:key="index">
+        <view class="user">
+          <image src="{{item.avatarUrl}}"></image>
+          <view class="right">
+            <view class="name">{{item.nickname}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="moresong">{{user.moreText}}></view>
+    </view>
+  </scroll-view>
+</view>

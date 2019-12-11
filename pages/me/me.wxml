@@ -1,0 +1,33 @@
+<view wx:if="{{id===0}}">
+  <view class="greetings">你还没用登录喔</view>
+  <view class="immediately" bindtap="login">立即登录</view>
+</view>
+<view wx:if="{{id!==0}}">
+  <view class="top">
+    <image src="{{user.profile.avatarUrl}}"></image>
+    <view class="center">
+      <view class="nickname">{{nickname}}</view>
+      <view class="level">Lv:{{user.level}}</view>
+    </view>
+    <view class="signin">签到</view>
+  </view>
+  <view class="data">
+    <view class="box">
+      <view>{{user.profile.eventCount}}</view>
+      <view class="font">动态</view>
+    </view>
+    <view class="box">
+      <view>{{user.profile.follows}}</view>
+      <view class="font">关注</view>
+    </view>
+    <view class="box">
+      <view>{{user.profile.followeds}}</view>
+      <view class="font">粉丝</view>
+    </view>
+    <view class="box" bindtap="editmsg">
+      <image src="../../images/edit.png"></image>
+      <view class="font">编辑资料</view>
+    </view>
+  </view>
+  <view class="outlogin" bindtap="loginout">退出登录</view>
+</view>

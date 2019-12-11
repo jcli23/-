@@ -1,0 +1,46 @@
+.register{
+  margin-top: 30rpx;
+  border-top: 2rpx solid #f2f2f2;
+  position: relative;
+}
+.code{
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 24rpx;
+  background: rgba(0, 183, 255, 0.938);
+  text-align: center;
+  color: white;
+  border-radius: 6rpx;
+  position: absolute;
+  z-index: 100;
+  right: 20rpx;
+  top: 190rpx;
+}
+.twobutton{
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.one_button{
+  width: 25%;
+  margin: 0 12.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background: red;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}
+.two_button{
+  width: 25%;
+  margin: 0 12.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background: rgb(212, 125, 25);
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}

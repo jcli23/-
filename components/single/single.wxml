@@ -1,0 +1,21 @@
+<view wx:if="{{result===false}}">
+  <view class="none">暂无数据~</view>
+</view>
+<view wx:if="{{result===true}}">
+   <view class="all" bindtap="playall">
+  <image src="../../images/play.png"></image>
+  <view class="playall">播放全部</view>
+</view>
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{songs}}" wx:key="index">
+    <view class="songslist" bindtap="play" data-index="{{index}}">
+      <view class="song">
+        <view class="songname">{{item.name}}</view>
+        <view class="name">{{item.artists[0].name}}-{{item.album.name}}</view>
+      </view>
+      <image src="../../images/play.png" class="play"></image>
+      <image src="../../images/menu.png" class="menu"></image>
+    </view>
+  </view>
+</scroll-view>
+</view>

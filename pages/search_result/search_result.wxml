@@ -1,0 +1,40 @@
+<view class="top">
+  <image src="../../images/left_black.png" bindtap="back"></image>
+  <van-field value="{{value}}" placeholder="{{realkeyword}}" border="{{ false }}" bind:change="onChange" bind:confirm="confirm" class="input" data-realkeyword="{{realkeyword}}" data-value="value" />
+  <van-popup show="{{show}}" position="top" custom-style="width:80%; height:600rpx; margin-top:100rpx " overlay="{{false}}">
+    <view wx:for="{{keywords}}" wx:key="index">
+      <view class="searchkey" bindtap="choose" data-keyword="{{item.keyword}}">
+        <image src="../../images/search_black.png"></image>
+        <view class="keyword">{{item.keyword}}</view>
+      </view>
+    </view>
+  </van-popup>
+  <image src="../../images/user.png" class="user"></image>
+</view>
+<view class="line"></view>
+<van-tabs active="{{active}}">
+  <van-tab title="综合">
+    <comprehensive value="{{value}}"></comprehensive>
+  </van-tab>
+  <van-tab title="单曲">
+    <single value="{{value}}"></single>
+  </van-tab>
+  <van-tab title="视频">
+    <videos value="{{value}}"></videos>
+  </van-tab>
+  <van-tab title="歌手">
+    <singer value="{{value}}"></singer>
+  </van-tab>
+  <van-tab title="专辑">
+    <album value="{{value}}"></album>
+  </van-tab>
+  <van-tab title="歌单">
+    <songsheet value="{{value}}"></songsheet>
+  </van-tab>
+  <van-tab title="主播电台">
+    <station value="{{value}}"></station>
+  </van-tab>
+  <van-tab title="用户">
+    <user value="{{value}}"></user>
+  </van-tab>
+</van-tabs>

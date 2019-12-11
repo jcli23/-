@@ -1,0 +1,51 @@
+<view class="top">
+  <image src="../../images/left_black.png" bindtap="back"></image>
+  <van-field value="{{value}}" placeholder="{{realkeyword}}" border="{{ false }}" bind:change="onChange" bind:confirm="confirm" class="input" data-realkeyword="{{realkeyword}}" data-value="value" />
+  <van-popup show="{{show}}" position="top" custom-style="width:80%; height:600rpx; margin-top:100rpx " overlay="{{false}}">
+    <view wx:for="{{keywords}}" wx:key="index">
+      <view class="searchkey" bindtap="choose" data-keyword="{{item.keyword}}">
+        <image src="../../images/search_black.png"></image>
+        <view class="keyword">{{item.keyword}}</view>
+      </view>
+    </view>
+  </van-popup>
+  <image src="../../images/user.png" class="user"></image>
+</view>
+<view class="line"></view>
+<view wx:if="{{searchlist.length>0}}">
+  <view class="Record">
+    <view class="font">历史记录</view>
+    <image src="../../images/del.png" bindtap="delsearch"></image>
+  </view>
+  <view class="display">
+    <scroll-view scroll-x="true" style="width: 100%">
+      <view wx:for="{{searchlist}}" wx:key="index" class="searchlist">
+        <view class="value" bindtap="choose" data-keyword="{{item}}">{{item}}</view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<view class="searchhot">热搜榜</view>
+<scroll-view scroll-y="true" style="height: 1600rpx;">
+  <view wx:for="{{list}}" wx:key="index">
+    <view class="box" bindtap="choosehot" data-hotword="{{item.searchWord}}">
+      <view class="index {{index<3? 'indexred':''}}">{{index+1}}</view>
+      <view class="center">
+        <view class="firstrow">
+          <view class="searchWord {{index<3? 'word_bold':''}}">{{item.searchWord}}</view>
+          <view wx:if="{{item.iconType===5}}">
+            <image src="{{item.iconUrl}}" class="icon"></image>
+          </view>
+          <view wx:if="{{item.iconType===2}}">
+            <view class="new">NEW</view>
+          </view>
+          <view wx:if="{{item.iconType===1}}">
+            <view class="hot">HOT</view>
+          </view>
+        </view>
+        <view class="content">{{item.content}}</view>
+      </view>
+      <view class="score">{{item.score}}</view>
+    </view>
+  </view>
+</scroll-view>

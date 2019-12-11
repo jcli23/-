@@ -1,0 +1,43 @@
+.top{
+  display: flex;
+  height: 80rpx;
+  width: 95%;
+  padding: 0 2.5%;
+  align-items: center;
+}
+.top image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.top .input{
+  width: 85%;
+}
+.searchkey{
+  height: 96rpx;
+  width: 88%;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  border: 2rpx solid #f2f2f2;
+  border-top: none;
+}
+.searchkey image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.searchkey .keyword{
+  font-size: 26rpx;
+  color: #333;
+  margin-left: 30rpx;
+  border-right: 2rpx solid #f2f2f2;
+}
+.top .user{
+  width: 40rpx;
+  height: 40rpx;
+}
+.line{
+  margin-top: 4rpx;
+  width: 75%;
+  border-bottom: 2rpx solid #999;
+  margin-left: 13%;
+}

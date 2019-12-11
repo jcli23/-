@@ -1,0 +1,11 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{djRadio}}" wx:key="index">
+    <view class="songsheets" bindtap="gotoradio" data-id="{{item.id}}">
+      <image src="{{item.picUrl}}"></image>
+      <view class="right">
+        <view class="name">{{item.name}}</view>
+        <view class="artist">{{item.artist.name}} {{item.dj.nickname}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

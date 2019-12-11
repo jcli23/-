@@ -1,0 +1,58 @@
+.top{
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.phone{
+  width: 200rpx;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.email{
+  width: 200rpx;
+  height: 76rpx;
+  text-align: center;
+  line-height: 76rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+.bottom{
+  color: black;
+  border-bottom: 4rpx solid red;
+}
+.login{
+  margin-top: 30rpx;
+  border-bottom: 2rpx solid #f2f2f2;
+  border-top: 2rpx solid #f2f2f2;
+}
+.twobutton{
+  margin-top: 120rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.one_button{
+  width: 25%;
+  margin: 0 12.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background: red;
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}
+.two_button{
+  width: 25%;
+  margin: 0 12.5%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  background: rgb(212, 125, 25);
+  text-align: center;
+  color: white;
+  border-radius: 10rpx;
+}

@@ -1,0 +1,17 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{videos}}" wx:key="index">
+    <view class="videos">
+      <view class="left">
+        <image src="{{item.coverUrl}}"></image>
+        <view class="playtime">
+          <image src="../../images/right.png"></image>
+          <view class="time">{{item.playTime}}</view>
+        </view>
+      </view>
+      <view class="right">
+        <view class="name">{{item.title}}</view>
+        <text class="count">{{item.durationms}}\t by\t {{item.creator[0].userName}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

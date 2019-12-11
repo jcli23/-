@@ -1,0 +1,56 @@
+.top {
+  display: inline-block;
+  width: 25%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.letter_box{
+  display: inline-block;
+  padding: 0 10rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+}
+.name {
+  font-size: 32rpx;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.letter{
+  font-size: 28rpx;
+  padding: 0 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.bottom{
+  border-bottom: 4rpx solid red;
+  
+}
+.color{
+  background: red;
+  color: white;
+}
+.scroll-view_H {
+  white-space: nowrap;
+}
+.artist{
+  height: 160rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 40rpx 0;
+}
+.artist .img{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 50%;
+  margin-left: 80rpx;
+}
+.artist .name{
+  margin-left: 80rpx;
+}
+

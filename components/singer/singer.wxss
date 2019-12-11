@@ -1,0 +1,17 @@
+.talks{
+  width: 95%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 2.5% 40rpx 2.5%;
+}
+.talks image{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+}
+.talks .right{
+  font-size: 26rpx;
+  margin-left: 20rpx;
+  width: 60%;
+}

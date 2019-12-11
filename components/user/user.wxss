@@ -1,0 +1,20 @@
+.user{
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  width: 95%;
+  padding: 0 2.5% 40rpx 2.5%;
+}
+.user image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.user .right{
+  margin-left: 20rpx;
+  width: 70%;
+}
+.user .right .name{
+  font-size: 24rpx;
+  line-height: 30rpx;
+}

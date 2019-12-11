@@ -1,0 +1,14 @@
+<view class="big_box">
+  <view class="top">
+    <view class="left">推荐电台</view>
+    <view class="right">电台广场</view>
+  </view>
+  <view class="box">
+    <view wx:for="{{djprogram}}" wx:key="index" class="result">
+      <view wx:if="{{index<6}}" bindtap="goto" data-id="{{item.program.radio.id}}">
+        <image src="{{item.picUrl}}" class="img"></image>
+        <view class="name">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>

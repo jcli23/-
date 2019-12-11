@@ -1,0 +1,18 @@
+<view class="big_box">
+  <view class="top">
+    <view class="left">推荐歌单</view>
+    <view class="right">歌单广场</view>
+  </view>
+  <view class="box">
+    <view wx:for="{{result}}" wx:key="index" class="result">
+      <view wx:if="{{index<6}}">
+        <image src="{{item.picUrl}}" class="img" data-id="{{item.id}}" bindtap="goto" data-copywriter="{{item.copywriter}}"></image>
+        <view class="name">{{item.name}}</view>
+        <view class="playCount">
+          <image src="../../images/right.png" class="image"></image>
+          <view class="count">{{item.playCount}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

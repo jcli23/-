@@ -1,0 +1,28 @@
+<view class="bigbox">
+  <view class="top">
+    <view class="left">
+      <view class="font {{num===0? 'color':''}}" bindtap="chagefont" data-num="{{0}}">新碟</view>
+      <view>|</view>
+      <view class="font {{num===1? 'color':''}}" bindtap="chagefont" data-num="{{1}}">新歌</view>
+    </view>
+    <view class="right">更多新碟</view>
+  </view>
+  <view>
+    <view wx:if="{{num===0}}" class="box">
+      <view wx:for="{{album}}" wx:key="index" class="result">
+        <view wx:if="{{index<6}}" data-id="{{item.id}}" bindtap="goto1">
+          <image src="{{item.picUrl}}" class="img"></image>
+          <view class="name">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{num===1}}" class="box">
+      <view wx:for="{{topsong}}" wx:key="index" class="result">
+        <view wx:if="{{index<6}}" data-index="{{index}}" bindtap="goto2">
+          <image src="{{item.album.blurPicUrl}}" class="img"></image>
+          <view class="name">{{item.name}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

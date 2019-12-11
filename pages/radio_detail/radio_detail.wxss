@@ -1,0 +1,337 @@
+.bgcover{
+  width: 100%;
+  height: 560rpx;
+  position: relative;
+}
+.bgcover .cover{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.bgcover .top{
+  padding: 40rpx 0 2.5%;
+  width: 65%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+.bgcover .top .back{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+}
+.bgcover .top .font{
+  font-size: 30rpx;
+  font-weight: 700;
+  color: white;
+  margin-left: 30rpx;
+}
+.bgcover .bottom{
+  margin-top:280rpx;
+  height: 100rpx;
+  width: 95%;
+  padding: 0 2.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bgcover .bottom .left{
+  width: 300rpx;
+  height: 80rpx;
+}
+.bgcover .bottom .left .name{
+  font-size: 28rpx;
+  color: white;
+  font-weight: 700;
+}
+.bgcover .bottom .left .subCount{
+  font-size: 20rpx;
+  color: #999;
+}
+.bgcover .bottom .right{
+  display: flex;
+  align-items: center;
+  width: 160rpx;
+  height: 50rpx;
+  background: red;
+  border-radius: 30rpx;
+}
+.bgcover .bottom .right .star{
+  width: 30rpx;
+  height:30rpx;
+  margin-left: 30rpx;
+}
+.bgcover .bottom .right .font{
+  font-size: 20rpx;
+  margin-left: 10rpx;
+  color: #f2f2f2;
+}
+.songs{
+  width: 100%;
+  margin-top: -40rpx;
+}
+.songs .top{
+  border-radius: 40rpx 40rpx 0 0;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  z-index: 100;
+  border: 2rpx solid #f2f2f2;
+  justify-content: space-around;
+  background: white;
+}
+.songs .top .font{
+  width: 80rpx;
+  height: 76rpx;
+  line-height: 76rpx;
+  text-align: center;
+  font-size: 30rpx;
+
+}
+.songs .top .chage{
+  color: red;
+  border-bottom: 4rpx solid red;
+}
+.tags{
+  width: 95%;
+  padding: 40rpx 2.5%;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.anchor{
+  width: 95%;
+  padding: 0 2.5%;
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+}
+.anchor image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 50%;
+}
+.anchor .center{
+  margin-left: 2%;
+  height: 80rpx;
+  width: 240rpx;
+}
+.anchor .center .nickname{
+  height: 40rpx;
+  font-size: 26rpx;
+  line-height: 40rpx;
+}
+.anchor .center .description{
+  color: #999;
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.anchor .appreciate{
+  width: 120rpx;
+  height: 40rpx;
+  border: 2rpx solid red;
+  border-radius: 20rpx;
+  line-height: 40rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: red;
+  margin-left: 270rpx;
+}
+.dj{
+  height: 80rpx;
+  width: 95%;
+  padding: 60rpx 2.5%;
+}
+.dj .font{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.dj .classification{
+  display: flex;
+  align-items: center;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.dj .classification .font1{
+  color: #333;
+  font-size: 24rpx;
+}
+.dj .classification .category{
+  height: 20rpx;
+  margin-left: 10rpx;
+  padding: 0 6rpx;
+  font-size: 16rpx;
+  color: red;
+  line-height: 20rpx;
+  border: 2rpx solid red;
+  border-radius: 5rpx;
+}
+.comment{
+  width: 95%;
+  padding: 20rpx 2.5%;
+  font-size: 24rpx;
+  font-weight: 700;
+}
+.commentDatas{
+  width: 95%;
+  padding: 20rpx 2.5%;
+  display: flex;
+}
+.commentDatas .left{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.commentDatas .right{
+  width: 85%;
+  margin-left: 2.5%;
+  border-bottom: 2rpx solid #f2f2f2;
+}
+.commentDatas .nickname{
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #333;
+  font-size: 22rpx;
+}
+.commentDatas .content{
+  line-height: 50rpx;
+  font-size: 24rpx;
+}
+.bottom{
+  display: flex;
+  height: 60rpx;
+  align-items: center;
+}
+.bottom .line{
+  width: 30rpx;
+  border: 2rpx solid #f2f2f2;
+}
+.bottom .programName{
+  margin-left: 10rpx;
+  font-size: 20rpx;
+  color: #999;
+}
+.program_top{
+  width: 95%;
+  margin-left: 2.5%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.program_top .left{
+  font-size: 24rpx;
+  font-weight: 700;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.program_top .right{
+  display: flex;
+  height: 80rpx;
+  width: 220rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+.program_top .right .asc{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90rpx;
+}
+.program_top .right .choose{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90rpx;
+}
+.program_top .right .asc image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.program_top .right .asc .font{
+  font-size: 24rpx
+}
+.program_top .right .choose image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.program_top .right .choose .font{
+  font-size: 24rpx
+}
+.programsbox{
+  width: 95%;
+  height: 80rpx;
+  padding: 20rpx 2.5%;
+  display: flex;
+  align-items: center;
+}
+.programsbox .num{
+  width: 60rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+.programsbox .center{
+  width: 80%;
+  height: 80rpx;
+  margin-left: 2.5%;
+}
+.programsbox .center .name{
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.programsbox .center .two{
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.programsbox .center .two .createTime{
+  font-size: 16rpx;
+  width: 60rpx;
+  color: #999;
+}
+.programsbox .center .two .center{
+  width: 100rpx;
+  display: flex;
+  height: 40rpx;
+  align-items: center;
+}
+.programsbox .center .two .center image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.programsbox .center .two .center .listenerCount{
+  font-size: 16rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+.programsbox .center .two .right{
+  width: 100rpx;
+  display: flex;
+  height: 40rpx;
+  align-items: center;
+  padding: 0 20rpx;
+}
+.programsbox .center .two .right image{
+  width: 20rpx;
+  height: 20rpx;
+}
+.programsbox .center .two .right .duration{
+  font-size: 16rpx;
+  color: #999;
+  margin-left: 10rpx;
+}
+.programsbox .menu{
+  margin-left: 60rpx;
+}
+.programsbox .menu image{
+  width: 40rpx;
+  height: 40rpx;
+}

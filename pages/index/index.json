@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-search": "../../lib/vant/search/index",
+    "songlist":"../../components/songlist/songlist",
+    "newsong":"../../components/newsong/newsong",
+    "newmusic": "../../components/newmusic/newmusic",
+    "radio": "../../components/radio/radio",
+    "program": "../../components/program/program",
+    "search":"../../components/search/search"
+  }
+}

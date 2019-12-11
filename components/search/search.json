@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "van-field": "../../lib/vant/field/index",
+    "van-popup": "../../lib/vant/popup/index"
+  }
+}

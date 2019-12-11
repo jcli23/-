@@ -1,0 +1,10 @@
+<scroll-view scroll-y="true" style="height: 1600rpx;" bindscrolltolower="lower">
+  <view wx:for="{{user}}" wx:key="index">
+    <view class="user">
+      <image src="{{item.avatarUrl}}"></image>
+      <view class="right">
+        <view class="name">{{item.nickname}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

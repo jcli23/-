@@ -1,0 +1,149 @@
+.bgcover{
+  width: 100%;
+  height: 560rpx;
+  position: relative;
+}
+.bgcover .cover{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+}
+.bgcover .back{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 30rpx;
+  margin-top: 60rpx;
+}
+.bgcover .name{
+  font-size: 40rpx;
+  font-weight: 700;
+  margin-top: 250rpx;
+  margin-left: 30rpx;
+}
+.songs{
+  width: 100%;
+  margin-top: -60rpx;
+  border: 2rpx solid #f2f2f2;
+  border-radius: 40rpx 40rpx 0 0;
+}
+.songs .top{
+  border-radius: 40rpx 40rpx 0 0;
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+  background: white;
+}
+.songs .top .font{
+  width: 80rpx;
+  height: 76rpx;
+  z-index: 100;
+  line-height: 76rpx;
+  text-align: center;
+  font-size: 30rpx;
+
+}
+.songs .top .chage{
+  z-index: 100;
+  color: red;
+  border-bottom: 4rpx solid red;
+}
+.hot50{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+}
+.hot50 .play{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 25rpx;
+}
+.hot50 .font{
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.songbox {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  padding: 20rpx 0;
+  align-items: center;
+}
+.songbox .index {
+  color: #999;
+  font-size: 32rpx;
+  margin-left: 40rpx;
+  width: 30rpx;
+}
+.songbox .horn {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 40rpx;
+}
+.songbox .name {
+  width: 50%;
+  height: 80rpx;
+  margin-left: 40rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+}
+.songbox .name .song {
+  font-size: 24rpx;
+  line-height: 30rpx;
+  margin-top: 10rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.songbox .name .songlist {
+  font-size: 18rpx;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.songbox .play {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 22%;
+}
+.songbox .menu {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 2%;
+}
+.hang{
+  width: 100%;
+  height: 10rpx;
+  background: #f2f2f2;
+}
+.more{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+}
+.introduction{
+  width: 90%;
+  padding: 20rpx 5%;
+}
+.introduction .font{
+  height: 80rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  line-height: 80rpx;
+}
+.introduction .briefDesc{
+  font-size: 20rpx;
+  color: #999;
+  line-height: 40rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}

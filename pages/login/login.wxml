@@ -1,0 +1,29 @@
+<view class="top">
+  <view class="phone {{num===0? 'bottom':''}}" bindtap="exchage" data-num="{{0}}">手机号登录</view>
+  <view class="email {{num===1? 'bottom':''}}" bindtap="exchage" data-num="{{1}}">邮箱登录</view>
+</view>
+<view wx:if="{{num===0}}">
+  <view class="login">
+    <van-cell-group>
+      <van-field required clearable label="手机号" left-icon="phone-o" placeholder="请输入手机号" value="{{phonenum}}" bindblur="bindblur1" data-phonenum="{{value}}" bind:click-icon="onClickIcon" />
+
+      <van-field value="{{ password }}" type="password" label="密码" left-icon="contact" placeholder="请输入密码" value="{{password}}" bindblur="bindblur2" data-password="{{value}}" required border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <view class="twobutton">
+    <view class="one_button" bindtap="login">立即登录</view>
+    <view class="two_button" bindtap="gotophone">立即注册</view>
+  </view>
+</view>
+<view wx:if="{{num===1}}">
+  <view class="login">
+    <van-cell-group>
+      <van-field value="{{email}}" required clearable label="邮箱" left-icon="phone-o" placeholder="请输入网易邮箱"  bindblur="bindblur5" data-password="{{value}}" bind:click-icon="onClickIcon" />
+
+      <van-field value="{{password}}" type="password" label="密码" left-icon="contact" placeholder="请输入密码"  bindblur="bindblur2" data-password="{{value}}" required border="{{ false }}" />
+    </van-cell-group>
+  </view>
+  <view class="twobutton">
+    <view class="one_button" bindtap="emaillogin">立即登录</view>
+  </view>
+</view>

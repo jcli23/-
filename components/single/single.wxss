@@ -1,0 +1,56 @@
+.none{
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: 700;
+  color: #999;
+  margin-top: 80rpx;
+}
+.all{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  width: 95%;
+  padding: 0 2.5%;
+}
+.all image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.all .playall{
+  font-size: 28rpx;
+  margin-left: 40rpx;
+}
+.songslist{
+  width: 95%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 2.5%;
+}
+.songslist .song{
+  width: 85%;
+  height: 80rpx;
+}
+.songslist .song .songname{
+  font-size: 24rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+}
+.songslist .song .name{
+  font-size: 20rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #999;
+}
+.songslist .play{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+}
+.songslist .menu{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 30rpx;
+}

@@ -1,0 +1,57 @@
+<view class="background">
+  <image src="{{playmusic.al.picUrl}}" class="backgroundcover"></image>
+</view>
+<view class="header">
+  <view bindtap="back">
+    <image src="../../images/left_back.png"></image>
+  </view>
+  <view class="right">
+    <view class="font">{{song}}</view>
+    <view class="copywriter">{{author}}</view>
+  </view>
+</view>
+<view class="disk">
+  <image src="{{songcover}}"></image>
+</view>
+<view class="button">
+  <view>
+    <image src="../../images/love.png"></image>
+  </view>
+  <view>
+    <image src="../../images/download.png"></image>
+  </view>
+  <view>
+    <image src="../../images/flower.png"></image>
+  </view>
+  <view>
+    <image src="../../images/comment.png"></image>
+  </view>
+  <view>
+    <image src="../../images/songs.png"></image>
+  </view>
+</view>
+<view class="Playback_progress">
+  <view class="currentTime">{{currentTime}}</view>
+  <view class="slider">
+    <van-slider value="{{percentage}}" bind:change="onChange" bar-height="2px" active-color="#c20c0c" />
+  </view>
+  <view class="totalTime">{{totalTime}}</view>
+</view>
+<view class="bottom">
+  <view>
+    <image src="../../images/loop.png"></image>
+  </view>
+  <view>
+    <image src="../../images/nextsong.png" bindtap="last"></image>
+  </view>
+  <view>
+    <image src="../../images/stop_white.png" wx:if="{{num===0}}" bindtap="stop" class="playstop"></image>
+    <image src="../../images/play_white.png" wx:if="{{num===1}}" bindtap="play" class="playstop"></image>
+  </view>
+  <view>
+    <image src="../../images/lastsong.png" bindtap="next"></image>
+  </view>
+  <view>
+    <image src="../../images/menu_white.png"></image>
+  </view>
+</view>

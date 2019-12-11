@@ -1,0 +1,24 @@
+.playLists{
+  display: flex;
+  width: 95%;
+  height: 160rpx;
+  align-items: center;
+  padding: 20rpx 2.5%;
+}
+.playLists image{
+  height: 160rpx;
+  width: 160rpx;
+  border-radius: 10rpx;
+}
+.playLists .right{
+  margin-left: 20rpx;
+  width: 75%;
+}
+.playLists .right .name{
+  font-size: 24rpx;
+  line-height: 30rpx;
+}
+.playLists .right .count{
+  font-size: 20rpx;
+  color: #999;
+}

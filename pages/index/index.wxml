@@ -1,0 +1,58 @@
+<view wx:if="{{searchopen===false}}">
+  <view class="top">
+    <view class="music_house">音乐馆</view>
+    <van-search value="{{ value }}" placeholder="请输入搜索关键词" use-action-slot shape="round" bind:focus="open">
+      <view slot="action" bind:tap="onSearch">搜索</view>
+    </van-search>
+    <image src="../../images/music.png" class="img"></image>
+  </view>
+  <view class="box">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}">
+      <block wx:for="{{banner}}" wx:key="index">
+        <swiper-item class="banner">
+          <image src="{{item.imageUrl}}" class="img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="nav">
+    <view class="box">
+      <view class="small">
+        <image src="../../images/date.png"></image>
+      </view>
+      <view class="title">每日推荐</view>
+    </view>
+    <view class="box">
+      <view class="small">
+        <image src="../../images/songs.png"></image>
+      </view>
+      <view class="title">歌单</view>
+    </view>
+    <view class="box">
+      <view class="small">
+        <image src="../../images/pank.png"></image>
+      </view>
+      <view class="title">排行榜</view>
+    </view>
+    <view class="box">
+      <view class="small">
+        <image src="../../images/radio.png"></image>
+      </view>
+      <view class="title">电台</view>
+    </view>
+    <view class="box">
+      <view class="small">
+        <image src="../../images/live.png"></image>
+      </view>
+      <view class="title">直播</view>
+    </view>
+  </view>
+  <songlist></songlist>
+  <newsong></newsong>
+  <newmusic></newmusic>
+  <radio></radio>
+  <program></program>
+</view>
+<view wx:if="{{searchopen===true}}">
+  <search bind:close="close"></search>
+</view>

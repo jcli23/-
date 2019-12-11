@@ -1,0 +1,98 @@
+<view class="bgcover">
+  <image src="{{djradio.picUrl}}" class="cover"></image>
+  <view class="top">
+    <image src="../../images/left_back.png" class="back" bindtap="back"></image>
+    <view class="font">电台</view>
+  </view>
+  <view class="bottom">
+    <view class="left">
+      <view class="name">{{djradio.name}}</view>
+      <view class="subCount">{{djradio.subCount}}人已订阅</view>
+    </view>
+    <view class="right">
+      <image src="../../images/star.png" class="star"></image>
+      <view class="font">订阅</view>
+    </view>
+  </view>
+</view>
+<view class="songs">
+  <view class="top">
+    <view class="font {{num===0? 'chage':''}}" bindtap="num" data-num="{{0}}">详情</view>
+    <view class="font {{num===1? 'chage':''}}" bindtap="num" data-num="{{1}}">节目</view>
+  </view>
+</view>
+<view wx:if="{{num===0}}" class="detail">
+  <view class="tags">主播</view>
+  <view class="anchor">
+    <image src="{{djradio.dj.avatarUrl}}"></image>
+    <view class="center">
+      <view class="nickname">{{djradio.dj.nickname}}</view>
+      <view class="description">{{djradio.dj.description}}</view>
+    </view>
+    <view class="appreciate">赞赏</view>
+  </view>
+  <view class="dj">
+    <view class="font">电台内容简介</view>
+    <view class="classification">
+      <view class="font1">分类：</view>
+      <view class="category">{{djradio.category}}</view>
+    </view>
+  </view>
+  <view class="comment">精彩评论</view>
+  <scroll-view scroll-y="true" style="height: 600rpx;">
+    <view wx:for="{{djradio.commentDatas}}" class="commentDatas" wx:key="index">
+      <image src="{{item.userProfile.avatarUrl}}" class="left"></image>
+      <view class="right">
+        <view class="nickname">{{item.userProfile.nickname}}</view>
+        <view class="content">{{item.content}}</view>
+        <view class="bottom">
+          <view class="line"></view>
+          <view class="programName">{{item.programName}}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view wx:if="{{num===1}}">
+  <view class="program_top">
+    <view class="left">共{{count}}期</view>
+    <view class="right">
+      <view wx:if="{{asc===false}}" bindtap="chageasc" class="asc">
+        <image src="../../images/low.png"></image>
+        <view class="font">排序</view>
+      </view>
+      <view wx:if="{{asc===true}}" bindtap="chageasc" class="asc">
+        <image src="../../images/up.png"></image>
+        <view class="font">排序</view>
+      </view>
+      <view class="choose">
+        <image src="../../images/menu_black.png"></image>
+        <view class="font">多选</view>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y="true" style="height: 600rpx;" bindscrolltolower="lower">
+    <view wx:for="{{programs}}" wx:key="index">
+      <view class="programsbox">
+        <view class="num">{{item.serialNum}}</view>
+        <view class="center">
+          <view class="name">{{item.name}}</view>
+          <view class="two">
+            <view class="createTime">{{item.createTime}}</view>
+            <view class="center">
+              <image src="../../images/rightplay.png"></image>
+              <view class="listenerCount">{{item.listenerCount}}</view>
+            </view>
+            <view class="right">
+              <image src="../../images/time.png"></image>
+              <view class="duration">{{item.duration}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="menu">
+          <image src="../../images/menu.png"></image>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

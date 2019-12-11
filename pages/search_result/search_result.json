@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "van-field": "../../lib/vant/field/index",
+    "van-popup": "../../lib/vant/popup/index",
+    "van-tab": "../../lib/vant/tab/index",
+    "van-tabs": "../../lib/vant/tabs/index",
+    "comprehensive":"../../components/comprehensive/comprehensive",
+    "single": "../../components/single/single",
+    "videos": "../../components/video/video",
+    "singer": "../../components/singer/singer",
+    "album": "../../components/album/album",
+    "songsheet": "../../components/songsheet/songsheet",
+    "station": "../../components/station/station",
+    "user": "../../components/user/user"
+  }
+}

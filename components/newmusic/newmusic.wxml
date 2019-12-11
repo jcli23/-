@@ -1,0 +1,14 @@
+<view class="big_box">
+  <view class="top">
+    <view class="left">音乐新势力</view>
+    <view class="right">新音乐</view>
+  </view>
+  <view class="box">
+    <view wx:for="{{newmusic}}" wx:key="index" class="result">
+      <view wx:if="{{index<6}}" data-index="{{index}}" bindtap="goto">
+        <image src="{{item.song.album.blurPicUrl}}" class="img"></image>
+        <view class="name">{{item.song.album.name}}</view>
+      </view>
+    </view>
+  </view>
+</view>
